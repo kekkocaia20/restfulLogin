@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registrazione</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index">CICCIO'S DB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content (Register Form) -->
+    <div class="content">
+        <div class="login-wrapper">
+            <div class="login-box">
+                <h2 class="text-center">Registrati</h2>
+                <!-- Mostra il messaggio di errore in rosso -->
+                <div th:if="${error}" class="alert alert-danger">
+                    <span th:text="${error}"></span>
+                </div>
+                <form id="registerForm" th:action="@{/register}" method="post">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome">
+                        <div class="text-danger" id="nomeError" style="display: none;">Inserisci un nome valido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cognome" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="cognome" name="cognome">
+                        <div class="text-danger" id="cognomeError" style="display: none;">Inserisci un cognome valido</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                        <div class="text-danger" id="emailError" style="display: none;">Inserisci un'email valida</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                        <div class="text-danger" id="passwordError" style="display: none;">Inserisci la password</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="accettoTrattamento" name="accettoTrattamento">
+                        <label class="form-check-label" for="accettoTrattamento">Accetto il trattamento dei dati personali</label>
+                        <div class="text-danger" id="trattamentoError" style="display: none;">Devi accettare il trattamento dei dati</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Registrati</button>
+                </form>
+                
+                <!-- Link per l'accesso -->
+                <div class="text-center mt-3">
+                    <a href="login" class="text-decoration-none">Sei già registrato? Accedi!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>
+                Seguimi su: <a href="https://www.linkedin.com/in/francesco-caianiello-065525197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
+                | <a href="https://www.instagram.com/kekkocaia_20" target="_blank">Instagram</a>
+                | <a href="mailto:frank.caianiello@gmail.com">Gmail</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>
+

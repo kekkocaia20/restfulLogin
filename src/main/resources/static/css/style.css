@@ -1,0 +1,89 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff !important;
+    z-index: 1000; /* Assicurati che la navbar sia sempre sopra altri contenuti */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d4d4d4 !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+    border: 2px solid #343a40;
+    border-radius: 5px;
+}
+
+/* Content Section (Login Box) */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 350px; /* Limita la larghezza */
+    margin: 0 auto; /* Centra il contenitore */
+    padding: 20px;
+}
+
+/* Login box container */
+.login-box {
+    width: 100%;
+    max-width: 350px;  /* Limita la larghezza del contenitore */
+    padding: 20px;
+    background-color: #ffffff;  /* Puoi aggiungere un colore di sfondo per renderlo più visibile */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Spinge il footer in fondo alla pagina */
+}
+
+.footer a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .content {
+        height: auto;
+        padding: 20px;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,5 @@
+springPJrestfuls\restfulLogin\model\Utente.class
+springPJrestfuls\restfulLogin\controller\GestoreRichieste.class
+springPJrestfuls\restfulLogin\repository\IRepoUtente.class
+springPJrestfuls\restfulLogin\RestfulLoginApplication.class
+springPJrestfuls\restfulLogin\config\MvcConfigurer.class
